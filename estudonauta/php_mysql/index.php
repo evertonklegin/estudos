@@ -16,11 +16,9 @@
     ?>
     <div id="corpo">
         <?php include_once "topo.php"?>
-        
+
         <h1>Escolha seu Jogo</h1>
-        <?= msg_sucesso('Arquivo aberto com sucesso!')?>
-        <?= msg_aviso('Você esqueceu de colocar o nome!')?>
-        <?= msg_erro('Falha no cadastro do jogo!')?>
+
         <form action="index.php" method="get" id="busca">
             Ordenar: 
             <a href="index.php?o=n&c=<?=$chave?>"> Nome </a>| 
@@ -32,7 +30,7 @@
             <input type="text" name="c" id="c" size="10" maxlength="40">
             <input type="submit" value="Ok">
         </form>
-        
+
         <table class="listagem">
             <?php 
                 $q = "select j.cod, j.nome, g.genero, p.produtora, j.capa from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod ";
