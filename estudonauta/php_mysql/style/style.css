@@ -90,3 +90,7 @@ div.erro {
     background-color: rgba(239, 223, 222);
     color: rgb(157, 75, 69);
 }
+
+.icons-listagem {
+    text-align: right;
+}
