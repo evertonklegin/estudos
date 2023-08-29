@@ -7,7 +7,7 @@
         echo " (".$_SESSION['tipo'].") ";
         echo " | Meus Dados  ";
         if(is_admin()) {
-            echo " | Novo usuário";
+            echo " | <a href='user-new.php'>Novo usuário</a>";
             echo " | Novo jogo";
         }
         echo " | <a href='user-logout.php'>Sair</a>";
