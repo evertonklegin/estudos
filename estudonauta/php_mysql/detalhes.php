@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título da Página</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 </head>
 <body>
     <?php 
@@ -37,7 +38,7 @@
                 }
             ?>
         </table>
-        <a href="javascript:history.back();"><img src="icones/icoback.png" alt="voltar"></a>
+        <?= voltar()?>
     </div>
     <?php include_once "rodape.php";?>
 </body>
