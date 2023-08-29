@@ -10,19 +10,40 @@
     <?php 
         require_once "includes/banco.php";
         require_once "includes/funcoes.php";
+        $ordem = $_GET['o'] ?? "n";
     ?>
     <div id="corpo">
         <?php include_once "topo.php"?>
         <h1>Escolha seu Jogo</h1>
         <form action="index.php" method="get" id="busca">
-            Ordenar: Nome | Produtora | Nota Alta | Nota Baixa |
+            Ordenar: 
+            <a href="index.php?o=n">Nome | </a>
+            <a href="index.php?o=p">Produtora |</a> 
+            <a href="index.php?o=n1">Nota Alta |</a> 
+            <a href="index.php?o=n2">Nota Baixa |</a>
             <label for="c">Buscar:</label>
             <input type="text" name="c" id="c" size="10" maxlength="40">
             <input type="submit" value="Ok">
         </form>
         <table class="listagem">
             <?php 
-                $q = "select j.cod, j.nome, g.genero, p.produtora, j.capa from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod";
+                $q = "select j.cod, j.nome, g.genero, p.produtora, j.capa from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod ";
+
+                switch ($ordem) {
+                    case "p":
+                        $q .= "ORDER BY p.produtora";
+                        break;
+                    case "n1":
+                        $q .= "ORDER BY j.nota DESC";
+                        break;
+                    case "n2":
+                        $q .= "ORDER BY j.nota ASC";
+                        break;
+                    default:
+                        $q .= "ORDER BY j.nome";
+                        break;
+                }
+                
                 $busca = $banco->query($q);
                 if(!$busca) {
                     echo "<tr><td>Infelismente a busca deu errado</td></tr>";
