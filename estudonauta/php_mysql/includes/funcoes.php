@@ -11,6 +11,10 @@ function voltar() {
     return "<a href='javascript:history.back();'><span class='material-symbols-outlined'>arrow_back</span></a>";
 }
 
+function voltarHome() {
+    return "<a href='index.php'><span class='material-symbols-outlined'>arrow_back</span></a>";
+}
+
 function msg_sucesso($m) {
     $resp = "<div class='sucesso'><span class='material-symbols-outlined'>check_circle</span> $m</div>";
     return $resp;
