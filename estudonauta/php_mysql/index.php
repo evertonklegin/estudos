@@ -20,11 +20,11 @@
         
         <form action="index.php" method="get" id="busca">
             Ordenar: 
-            <a href="index.php?o=n">Nome | </a>
-            <a href="index.php?o=p">Produtora |</a> 
-            <a href="index.php?o=n1">Nota Alta |</a> 
-            <a href="index.php?o=n2">Nota Baixa |</a>
-            <a href="index.php">Mostrar Todos |</a>
+            <a href="index.php?o=n&c=<?=$chave?>"> Nome </a>| 
+            <a href="index.php?o=p&c=<?=$chave?>"> Produtora </a>|
+            <a href="index.php?o=n1&c=<?=$chave?>"> Nota Alta </a>|
+            <a href="index.php?o=n2&c=<?=$chave?>"> Nota Baixa </a>|
+            <a href="index.php"> Mostrar Todos </a>|
             <label for="c">Buscar:</label>
             <input type="text" name="c" id="c" size="10" maxlength="40">
             <input type="submit" value="Ok">
