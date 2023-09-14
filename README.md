@@ -3,3 +3,4 @@
 
 Arquivos relativos aos cursos do Canal Curso em Vídeo.
 Arquivos relativos aos cursos da plataforma Estudonauta.
+Arquivos relativos a experimentos de desenvolvimento.
